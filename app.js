@@ -18,27 +18,61 @@ function getHumanChoice() {
   return userInput;
 }
 
-let humanScore = 0;
-let computerScore = 0;
+function playGame () {
+  let humanScore = 0;
+  let computerScore = 0;
 
-function playRound (humanChoice, computerChoice) {
-  humanchoice = humanChoice.toLowerCase();
+  function playRound (humanChoice, computerChoice) {
+    humanchoice = humanChoice.toLowerCase();
 
-  if (humanChoice === computerChoice) {
-    alert("It's a tie!")
+    if (humanChoice === computerChoice) {
+      alert("It's a tie!")
+    }
+
+    else if (
+      humanChoice === "rock" && computerChoice === "scissors" ||
+      humanChoice === "paper" && computerChoice === "rock" ||
+      humanChoice === "scissors" && computerChoice === "paper"
+    ) {
+      humanScore++;
+      alert (`You win! ${humanChoice} beats ${computerChoice}!`)
+    }
+
+    else {
+      computerScore++;
+      alert (`You lose! ${computerChoice} beats ${humanChoice}!`)
+    }
   }
 
-  else if (
-    humanChoice === "rock" && computerChoice === "scissors" ||
-    humanChoice === "paper" && computerChoice === "rock" ||
-    humanChoice === "scissors" && computerChoice === "paper"
-  ) {
-    humanScore++;
-    alert (`You win! ${humanChoice} beats ${computerChoice}! Prepare for next round!`)
+  let humanSelection = getHumanChoice();
+  let computerSelection = getComputerChoice();
+
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  if (humanScore > computerScore) {
+    alert("Congratulations! You won the game!");
   }
 
   else {
-    computerScore++;
-    alert (`You lose! ${computerChoice} beats ${humanChoice}! Prepare for next round!`)
+    alert("You lost the game. Better luck next time!");
   }
 }
+
+playGame();
+
