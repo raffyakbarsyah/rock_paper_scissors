@@ -23,10 +23,10 @@ function playGame () {
   let computerScore = 0;
 
   function playRound (humanChoice, computerChoice) {
-    humanchoice = humanChoice.toLowerCase();
+    humanChoice = humanChoice.toLowerCase();
 
     if (humanChoice === computerChoice) {
-      alert("It's a tie!")
+      alert("It's a tie!");
     }
 
     else if (
@@ -35,42 +35,51 @@ function playGame () {
       humanChoice === "scissors" && computerChoice === "paper"
     ) {
       humanScore++;
-      alert (`You win! ${humanChoice} beats ${computerChoice}!`)
+      alert (`You win! ${humanChoice} beats ${computerChoice}!`);
     }
 
     else {
       computerScore++;
-      alert (`You lose! ${computerChoice} beats ${humanChoice}!`)
+      alert (`You lose! ${computerChoice} beats ${humanChoice}!`);
     }
   }
 
   let humanSelection = getHumanChoice();
-  let computerSelection = getComputerChoice();
+  let computerSelection = getComputerChoice(Math.random());
+  console.log(computerSelection);
 
   playRound(humanSelection, computerSelection);
 
   humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
+  computerSelection = getComputerChoice(Math.random());
+  console.log(computerSelection);
   playRound(humanSelection, computerSelection);
 
   humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
+  computerSelection = getComputerChoice(Math.random());
+  console.log(computerSelection);
   playRound(humanSelection, computerSelection);
 
   humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
+  computerSelection = getComputerChoice(Math.random());
+  console.log(computerSelection);
   playRound(humanSelection, computerSelection);
 
   humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
+  computerSelection = getComputerChoice(Math.random());
+  console.log(computerSelection);
   playRound(humanSelection, computerSelection);
 
   if (humanScore > computerScore) {
     alert("Congratulations! You won the game!");
   }
 
-  else {
+  else if (humanScore < computerScore) {
     alert("You lost the game. Better luck next time!");
+  }
+
+  else {
+    alert("It's a tie! Refresh to rematch");
   }
 }
 
