@@ -1,4 +1,4 @@
-# Rock Paper Scissors (JavaScript Alert Game)
+# Rock Paper Scissors (The Odin Project JavaScript Task)
 
 This is a simple **Rock Paper Scissors** game built as part of [The Odin Project](https://www.theodinproject.com/) Foundations curriculum. The game runs entirely using **browser alerts** and prompts.
 
