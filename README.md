@@ -18,5 +18,5 @@ This is a simple **Rock Paper Scissors** game built as part of [The Odin Project
 
 ## Notes
 
-- This version focuses on learning JavaScript basics.
+- This version focuses on learning JavaScript basics based on The Odin Project.
 - The game uses `prompt()` and `alert()` for user interaction instead of the browser console or HTML page elements.
