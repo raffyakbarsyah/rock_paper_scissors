@@ -6,7 +6,7 @@ This is a simple **Rock Paper Scissors** game built as part of [The Odin Project
 
 - The player competes against the computer.
 - The game plays **5 rounds** total.
-- Player input is collected using the `prompt()` dialog.
+- Player input is collected using the `prompt()`.
 - The computer chooses randomly using `Math.random()`.
 - Round results and the final winner are shown using `alert()` pop-ups.
 
